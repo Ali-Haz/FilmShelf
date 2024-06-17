@@ -1,0 +1,19 @@
+﻿@model IEnumerable<FilmShelf.Models.Movie>
+
+@if (Model != null && Model.Any())
+{
+    foreach (var movie in Model)
+    {
+        <div>
+            <img src="@Url.Content("~/Image/" + movie.ImageUrl)" alt="@movie.Title" />
+            <h2>@movie.Title</h2>
+            <p>@movie.Description</p>
+            <p>@movie.ReleaseDate</p>
+            <p>@movie.Price</p>
+        </div>
+    }
+}
+else
+{
+    <p>No movies found.</p>
+}
