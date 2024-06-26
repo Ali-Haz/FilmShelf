@@ -2,6 +2,13 @@
 
 @{
     ViewData["Title"] = "Create";
+
+    // Calculate the year 1900 using the equation
+    int year1900 = 1900;
+
+    // Create a DateTime object for January 1st, 1900
+    DateTime min = new DateTime(year1900, 1, 1);
+
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -25,7 +32,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="ReleaseDate" class="control-label"></label>
-                <input asp-for="ReleaseDate" class="form-control" />
+                <input asp-for="ReleaseDate" class="form-control" type="date" min="@min.ToString("yyyy-MM-dd")" max="@DateTime.Now.ToString("yyyy-MM-dd")" />
                 <span asp-validation-for="ReleaseDate" class="text-danger"></span>
             </div>
             <div class="form-group">
