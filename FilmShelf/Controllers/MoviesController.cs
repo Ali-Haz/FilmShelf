@@ -10,9 +10,11 @@ using FilmShelf.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Data.SqlClient;
 using FilmShelf;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FilmShelf.Controllers
 {
+    [Authorize]
     public class MoviesController : Controller
     {
         private readonly FilmShelfContext _context;

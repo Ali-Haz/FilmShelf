@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using FilmShelf.Areas.Identity.Data;
 using FilmShelf.Models;
 using Microsoft.Data.SqlClient;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FilmShelf.Controllers
 {
+    [Authorize]
     public class GenresController : Controller
     {
         private readonly FilmShelfContext _context;

@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FilmShelf.Areas.Identity.Data;
 using FilmShelf.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FilmShelf.Controllers
 {
+    [Authorize]
     public class RentalsController : Controller
     {
         private readonly FilmShelfContext _context;
