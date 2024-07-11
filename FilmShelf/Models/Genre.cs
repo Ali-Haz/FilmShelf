@@ -10,7 +10,7 @@ namespace FilmShelf.Models
         [Required(ErrorMessage ="Please enter a genre name")]
         [StringLength(20,ErrorMessage ="Genre name is too long")]
         [RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$",
-            ErrorMessage ="Make sure name starts with a capital letter." + " Genre name must not inlcude any symbols or numbers.")]
+            ErrorMessage ="Make sure name starts with a capital letter." + " Genre name must not include any symbols or numbers.")]
         public string Name { get; set; }
 
         // Navigation property
